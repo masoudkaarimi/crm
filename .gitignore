@@ -1,0 +1,52 @@
+# Ignore system files
+*.pyc
+__pycache__/
+*.swp
+*.swo
+
+# Ignore development-specific files
+*.env
+*.sqlite3
+db.sqlite3
+media/
+
+# Ignore static files managed by Django
+/staticfiles/
+
+# Ignore local settings file
+/local_settings.py
+
+# Ignore IDE specific files and folders (modify based on your preference)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.bak
+*.~
+
+# Ignore compiled JavaScript and CSS files
+*.js.map
+*.css.map
+*.css.gz
+
+# Ignore database migrations (uncomment if using schema migrations)
+# /<app_name>/migrations/
+
+# Ignore sensitive or environment-specific information like API keys, secrets, etc.
+.env.local
+.env.*.local
+.env/
+
+# Ignore any other project-specific files or directories as needed
+
+# Ignore the virtual environment folder (if using virtualenv)
+venv/
+
+# Ignore the package manager directory (e.g., pipenv, poetry)
+/.venv/
+/.virtualenv/

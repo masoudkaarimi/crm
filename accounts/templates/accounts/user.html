@@ -1,0 +1,38 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+    {% include 'accounts/status.html' %}
+
+     <div class="row">
+        <div class="col-md">
+            <div class="card card-body">
+                <table class="table-sm">
+                    <tr>
+                        <th>#</th>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Note</th>
+                        <th>Status</th>
+                        <th>Date Ordered</th>
+                    </tr>
+                    {% if orders %}
+                        {% for order in orders %}
+                            <tr>
+                                <td>{{ order.id }}</td>
+                                <td>{{ order.product.name }}</td>
+                                <td>{{ order.product.category }}</td>
+                                <td>{{ order.note }}</td>
+                                <td>{{ order.status }}</td>
+                                <td>{{ order.date_created }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="6" style="text-align: center">There is no data to display.</td>
+                        </tr>
+                    {% endif %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
